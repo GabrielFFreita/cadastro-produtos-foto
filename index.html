@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>HeratSushi - Adicionar Produto</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;700&family=Urbanist:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <h1 class="logo">HeartSushi</h1>
+        <div class="nav-links">
+            <button onclick="toggleModal()" class="btn-link">Sobre</button>
+            <a href="listagem_produtos.php" class="btn-link">Listar Produtos</a>
+            <a href="produtos.php" class="btn-link">Ver Produtos</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="form-card">
+            <h2>Novo Produto</h2>
+            <form action="dados.php" method="POST" enctype="multipart/form-data">
+                <div class="input-group">
+                    <label>Nome do Produto</label>
+                    <input type="text" name="nome" required placeholder="Ex: Temaki Especial">
+                </div>
+                <div class="input-group">
+                    <label>Descrição</label>
+                    <textarea name="descricao" rows="3" placeholder="Detalhes do prato..."></textarea>
+                </div>
+                
+                <div class="row">
+                    <div class="input-group">
+                        <label>Preço (R$)</label>
+                        <input type="number" name="preco" step="0.01" required placeholder="0.00">
+                    </div>
+                    <div class="input-group">
+                        <label>Estoque</label>
+                        <input type="number" name="quantidade_estoque" required placeholder="0">
+                    </div>
+                </div>
+
+                <div class="input-group" style="margin-top: 15px;">
+                    <label>Foto do Produto</label>
+                    <input type="file" name="ds_foto" id="foto" accept="image/*">
+                    <div class="preview" id="preview" style="margin-top: 10px;">
+                        <span>Preview da imagem</span>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-submit">ADICIONAR AO INVENTÁRIO</button>
+            </form>
+        </div>
+    </main>
+
+    <div id="modalSobre" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="toggleModal()">&times;</span>
+            <h2 class="logo">HeratSushi</h2>
+            <p>O HeratSushi é um sistema de gestão de estoque futurista, focado na experiência imersiva e agilidade operacional.</p>
+            <p>Versão 1.0 - Protocolo Netflix Design.</p>
+        </div>
+    </div>
+
+    <script>
+        function toggleModal() {
+            const modal = document.getElementById('modalSobre');
+            modal.style.display = modal.style.display === 'flex' ? 'none' : 'flex';
+        }
+    </script>
+</body>
+</html>
