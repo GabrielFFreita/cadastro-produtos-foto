@@ -68,7 +68,7 @@ catch (PDOException $e) {
                         
                             
                             <td style="padding: 12px; text-align: center;">
-                                <a href="excluir_produto.php?id=<?php echo $produto['id']; ?>" 
+                                <a href="exclusao-produto.php?id=<?php echo $produto['id']; ?>" 
                                    style="color: var(--netflix-red); text-decoration: none; font-weight: bold; background-color: rgba(229, 9, 20, 0.1); padding: 6px 12px; border-radius: 4px; border: 1px solid var(--netflix-red); transition: all 0.3s;"
                                    onclick="return confirm('Tem certeza que deseja excluir o produto: <?php echo addslashes($produto['nome']); ?>?');">
                                    Excluir
