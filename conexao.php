@@ -2,7 +2,7 @@
 
 
     $host    = "localhost";
-    $dbname  = "cadastroprodutos";
+    $dbname  = "heartsushi";
     $usuario = "root";
     $senha   = "";
 

@@ -30,7 +30,7 @@ catch (PDOException $e) {
         <h1 class="logo">HeartSushi</h1>
         <div class="nav-links">
             <a href="index.html" class="btn-link">Adicionar Produto</a>
-            <a href="listagem_produtos.php" class="btn-link">Ver Tabela</a>
+            <a href="listagem_produtos.php" class="btn-link">Listar Produtos</a>
         </div>
     </nav>
 
@@ -57,7 +57,7 @@ catch (PDOException $e) {
                         
                         <div class="card-footer">
                             <span class="product-price">R$ <?php echo number_format($produto['preco'], 2, ',', '.'); ?></span>
-                            <span class="product-stock"><?php echo $produto['quantidade_estoque']; ?> un</span>
+                          
                         </div>
                     </div>
 

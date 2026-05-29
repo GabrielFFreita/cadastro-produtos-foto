@@ -136,10 +136,17 @@ input:focus, textarea:focus {
     box-shadow: 0 0 15px rgba(229, 9, 20, 0.4);
 }
 
+/* CORREÇÃO DO PROBLEMA DA LARGURA: 
+   Transformamos a .row num bloco simples e forçamos os grupos internos 
+   a ocupar 100% da largura, esticando as caixas de Preço e Estoque até ao fim. */
 .row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 25px;
+    display: block;
+    width: 100%;
+}
+
+.row .input-group {
+    width: 100%;
+    margin-bottom: 25px;
 }
 
 .btn-submit {
@@ -325,4 +332,5 @@ input:focus, textarea:focus {
 .close:hover {
     color: var(--netflix-red);
 }
+
 
